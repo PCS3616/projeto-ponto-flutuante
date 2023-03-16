@@ -5,17 +5,16 @@
 Este projeto é uma introdução a representação numérica. Para entender
 corretamente o que deve ser feito deve-se entender como números reais
 são tratados num computador, tudo isso foi/será aprofundado na
-disciplina "Cálculo Numérico" em algum momento no
-passado/presente/futuro.
+disciplina "Cálculo Numérico".
 
 ## Base de Cálculo Numérico
 
 Um computador é incapaz de armazenar valores fracionários (muito menos
-os reais), afinal é impossível atribuir meio bit de informação. Para
+os reais), afinal é impossível atribuir "meio bit de informação". Para
 viabilizar a operação deste tipo de variável, um método comumente
 utilizado é o do ponto flutuante, que utiliza alguns bits para armazenar
 o valor da variável, ignorando as vírgulas, e outros para guardar a
-localização do ponto dentro deste valor (por isso ponto flutuante).
+localização do ponto dentro deste valor (por isso ponto "flutuante").
 
 O primeiro bit do número é chamado de sinal, $s$, e é o bit de sinal do
 número. A seguinte cadeia de $C$ bits é chamada característica, $c$, e
@@ -34,7 +33,7 @@ que podem ser escritos dessa forma estão limitados superiormente e
 inferiormente, mas isso não tira a validade do método. Para maiores e
 menores precisões e abrangência do número representado, existem diversas
 padronizações de tamanhos de característica e mantissa definidas pelo
-IEEE, variando de 16 até 128 bits.
+padrão IEEE 754, variando de 16 até 128 bits.
 
 Realizar operações com ponto flutuante é ligeiramente mais complexo que
 com números inteiros, pois deve-se observar tanto a característica quanto a
@@ -44,7 +43,7 @@ mantissas de forma que as características fiquem iguais à maior da soma
 para a direita) e então somam-se as mantissas, mantendo a
 característica. Para realizar multiplicações e divisões, basta que as
 características sejam somadas ou subtraídas e as mantissas multiplicadas
-ou divididas. Depois de qualquer dos processos, os "carries" das
+ou divididas. Depois de qualquer dos processos, os "vai-um" das
 operações são convertidos em incrementos da característica, normalizando
 os valores.
 
@@ -64,6 +63,10 @@ Por fim, uma rotina `SUBTRAI` que funciona da mesma forma que a
 podem ser passados os ponteiros para elas, se fizer mais sentido no seu
 trabalho.
 
+O trabalho pode ser feito em duplas ou individualmente. Definir escopo
+de uso da biblioteca, mensagens de erro coerentes, eventuais limitações
+e funcionalidades não comentadas acima fazem parte do trabalho.
+
 ### Desafio
 
 Funções muito importantes para codificação são as funções de
@@ -74,10 +77,6 @@ flutuante de um dispositivo de entrada (teclado ou arquivo) e escrever
 para um arquivo de saída (monitor ou arquivo), respectivamente. Você
 deve implementar apenas uma dessas funções (mas se você quiser fazer as
 duas não tem problema).
-
-O trabalho pode ser feito em duplas ou individualmente. Definir escopo
-de uso da biblioteca, mensagens de erro coerentes, eventuais limitações
-e funcionalidades não comentadas acima FAZEM parte do trabalho.
 
 ## Perguntas
 
