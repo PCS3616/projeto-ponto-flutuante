@@ -16,7 +16,8 @@ utilizado é o do ponto flutuante, que utiliza alguns bits para armazenar
 o valor da variável, ignorando as vírgulas, e outros para guardar a
 localização do ponto dentro deste valor (por isso ponto "flutuante").
 
-O primeiro bit do número é chamado de sinal, $s$, e é o bit de sinal do
+Como ilustrado na figura a seguir - de um número de 32 bits -
+o primeiro bit do número é chamado de sinal, $s$, e é o bit de sinal do
 número. A seguinte cadeia de $C$ bits é chamada característica, $c$, e
 representa o expoente da base numérica escolhida (no caso 2). Por fim, o
 restante dos bits armazenados formam uma cadeia chamada de mantissa,
@@ -26,6 +27,10 @@ diante). Para que possam ser representados números grandes e pequenos, é
 feita uma correção no valor da característica, de forma que a expressão
 do valor final do número em ponto flutuante é:
 $(-1)^s\cdot2^{c-2^{C-1}+1}\cdot(1+f)$.
+
+<a title="Vectorization:  Stannered, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Float_example.svg">
+    <img width="512" alt="Ilustração de número ponto flutuante no padrão IEEE 754" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Float_example.svg/512px-Float_example.svg.png" style="background-color: white">
+</a>
 
 Com isso, pode-se representar os números reais com algum erro, que
 diminui quanto mais dígitos tiver a mantissa. Evidentemente, os números
